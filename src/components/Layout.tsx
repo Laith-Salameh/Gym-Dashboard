@@ -28,10 +28,10 @@ const Layout: FunctionComponent<IPageLayout> = ({ user, navItems, children})=>{
                     ? <CloseIcon className={styles.menu} fontSize="large" onClick={ ()=>{SetOpenNav(false)} } />
                     : <MenuIcon className={styles.menu} fontSize="large" onClick={ ()=>{SetOpenNav(true)} } />
                 }
-                <Link className={styles.logo} to="/"><img src="./logo.svg" alt="gym logo"/></Link>
+                <Link className={styles.logo} to="/Gym-Dashboard/"><img src="./logo.svg" alt="gym logo"/></Link>
                 <div className={"center " + styles.loggedInUser}>
                     <span>{user.username}</span>
-                    <img src={"."+user.imgSrc} />
+                    <img src={user.imgSrc} />
                 </div>
             </div>
             <div className={styles.wrapper + " " + ((openNav && !isMobile)? styles.open : "")}>

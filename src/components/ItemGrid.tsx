@@ -55,7 +55,7 @@ const ClientCard: FunctionComponent<{client: IClient}> = ({client})=>{
     
     return (
         <div className={styles.Card + " center-column "}  >
-            <img src={"."+client.avatar} 
+            <img src={client.avatar} 
                  alt={"client " + client.full_name}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
@@ -63,7 +63,7 @@ const ClientCard: FunctionComponent<{client: IClient}> = ({client})=>{
                   }}/>
             <h3>{client.full_name}</h3>
             <span>{client.subscription_plan}</span>
-            <div className="button" onClick={()=>{ navigate("/clients/" + client.id)}}>View more</div>
+            <div className="button" onClick={()=>{ navigate("/Gym-Dashboard/clients/" + client.id)}}>View more</div>
             <CloseIcon className={styles.close} onClick={()=>{handleDelete(client.id ?? -1)}}/>
         </div>
     )
@@ -79,7 +79,7 @@ const ClassCard: FunctionComponent<{gymClass: IClass}> = ({gymClass})=>{
     
     return (
         <div className={styles.Card + " center-column "}  >
-            <img src={"."+gymClass.image} 
+            <img src={gymClass.image} 
                  alt={"client " + gymClass.title}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
@@ -87,7 +87,7 @@ const ClassCard: FunctionComponent<{gymClass: IClass}> = ({gymClass})=>{
                   }}/>
             <h3>{gymClass.title}</h3>   
             <span>{gymClass.coach_name}</span>         
-            <div className="button" onClick={()=>{ navigate("/classes/" + gymClass.id)}}>View more</div>
+            <div className="button" onClick={()=>{ navigate("/Gym-Dashboard/classes/" + gymClass.id)}}>View more</div>
             <CloseIcon className={styles.close} onClick={()=>{handleDelete(gymClass.id ?? -1)}}/>
         </div>
     )

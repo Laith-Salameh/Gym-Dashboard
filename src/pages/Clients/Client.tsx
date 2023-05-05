@@ -21,7 +21,7 @@ const Client: FunctionComponent= ()=>{
         return(
             <div>
                 <h1>404 - Client not found</h1>
-                <div className="button" onClick={()=>{navigate("/clients") }}>return to Clients</div>
+                <div className="button" onClick={()=>{navigate("/Gym-Dashboard/clients") }}>return to Clients</div>
             </div>
             )   
     }
@@ -38,7 +38,7 @@ const Client: FunctionComponent= ()=>{
                             alt={"client " + client.full_name}
                             onError={({ currentTarget }) => {
                             currentTarget.onerror = null; 
-                            currentTarget.src="/images/admin.jpg";
+                            currentTarget.src="../images/admin.jpg";
                         }}/>
                     </Grid>
                     <Grid className={styles.description} item xs={12} md={8}>
@@ -55,7 +55,7 @@ const Client: FunctionComponent= ()=>{
                     </Grid>
                 </Grid>
             </div>
-            <span className={styles.link} onClick={()=>{navigate("/clients")}}><ArrowBackIcon/> return to clients</span>
+            <span className={styles.link} onClick={()=>{navigate("/Gym-Dashboard/clients")}}><ArrowBackIcon/> return to clients</span>
                 
         </>
             

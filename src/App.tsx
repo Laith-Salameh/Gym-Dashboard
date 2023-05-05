@@ -25,11 +25,11 @@ import { getClients } from "./store/api/clients"
 import { getClasses } from "./store/api/classes"
 
 const App = ()=>{
-  const user = { username: "admin" , imgSrc: "/images/admin.jpg"}
+  const user = { username: "admin" , imgSrc: "./images/admin.jpg"}
   const NavItems: INavItem[] = [
-    {link: "/", title: "Dashboard", iconSrc: DashboardIcon},
-    {link: "/clients", title: "Clients", iconSrc: ClientsIcon},
-    {link: "/classes", title: "Classes", iconSrc: ClassesIcon}
+    {link: "/Gym-Dashboard/", title: "Dashboard", iconSrc: DashboardIcon},
+    {link: "/Gym-Dashboard/clients", title: "Clients", iconSrc: ClientsIcon},
+    {link: "/Gym-Dashboard/classes", title: "Classes", iconSrc: ClassesIcon}
   ]
   const dispatch = useAppDispatch();
   useEffect(()=>{
@@ -52,12 +52,12 @@ const App = ()=>{
 const Router = () =>{
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/clients">
+      <Route path="/Gym-Dashboard/" element={<Home />} />
+      <Route path="/Gym-Dashboard/clients">
         <Route index={true} element={<Clients/>} />
         <Route path=":clientId" element={<Client/>} />
       </Route>
-      <Route path="/classes">
+      <Route path="/Gym-Dashboard/classes">
         <Route index={true} element={<Classes/>} />
         <Route path=":classId" element={<GymClass/>} />
       </Route>

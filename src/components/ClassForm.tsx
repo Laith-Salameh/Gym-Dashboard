@@ -43,13 +43,6 @@ const AddorUpdateClientForm  = forwardRef((props: {onClick: ()=> void, oldgymcla
                     error={state.title == ""}
                     onChange={(e)=>{handleChange(FormActionKinds.title, e.target.value)}}
                       />
-                      <DemoContainer components={['DatePicker']}>
-                        <DatePicker
-                        label="Controlled picker"
-                        value={dayjs(state.timing)}
-                        onChange={(newValue) => handleChange( FormActionKinds.timing, newValue?.toString() ?? (new Date()).toString())}
-                        />
-                      </DemoContainer>
             <TextField className={styles.price}
                     aria-label="maximum height"
                     label= "Price" 
@@ -80,6 +73,13 @@ const AddorUpdateClientForm  = forwardRef((props: {onClick: ()=> void, oldgymcla
                     error={state.coach_brief == ""}
                     onChange={(e)=>{handleChange(FormActionKinds.coach_brief, e.target.value)}}
                       />
+            <DemoContainer components={['DatePicker']}>
+                <DatePicker
+                label="Controlled picker"
+                value={dayjs(state.timing)}
+                onChange={(newValue) => handleChange( FormActionKinds.timing, newValue?.toString() ?? (new Date()).toString())}
+                />
+            </DemoContainer>
      
             <div tabIndex={4} className={allowCreate ? "button-inverted" : "button-disabled"} onClick={handleClick}>{isUpdate? "Edit" : "Creat"}</div>
         </div>

@@ -21,7 +21,7 @@ const GymClass: FunctionComponent= ()=>{
         return(
             <div>
                 <h1>404 - Class not found</h1>
-                <div className="button" onClick={()=>{navigate("/classes") }}>return to Classes</div>
+                <div className="button" onClick={()=>{navigate("/Gym-Dashboard/classes") }}>return to Classes</div>
             </div>
             )   
     }
@@ -38,7 +38,7 @@ const GymClass: FunctionComponent= ()=>{
                             alt={"class " + gymClass.title}
                             onError={({ currentTarget }) => {
                             currentTarget.onerror = null; 
-                            currentTarget.src="/images/admin.jpg";
+                            currentTarget.src="../images/admin.jpg";
                         }}/>
                     </Grid>
                     <Grid className={styles.description} item xs={12} md={8}>
@@ -59,7 +59,7 @@ const GymClass: FunctionComponent= ()=>{
                     </Grid>
                 </Grid>
             </div>
-            <span className={styles.link} onClick={()=>{navigate("/classes")}}><ArrowBackIcon/> return to classes</span>
+            <span className={styles.link} onClick={()=>{navigate("/Gym-Dashboard/classes")}}><ArrowBackIcon/> return to classes</span>
                 
         </>
             

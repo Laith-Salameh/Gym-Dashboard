@@ -8,8 +8,8 @@ export interface INavItem{
 }
 
 const NavBar: FunctionComponent<{styles: CSSModuleClasses, items: INavItem[] }> =({styles, items})=>{
-    const currentRoute = useLocation().pathname.split('/')[1];
-    const index = items.findIndex(item=> currentRoute == item.link.split('/')[1])
+    const currentRoute = useLocation().pathname.split('/')[2];
+    const index = items.findIndex(item=> currentRoute == item.link.split('/')[2])
     return(
         <nav className={styles.navBar}>
             <ul>
