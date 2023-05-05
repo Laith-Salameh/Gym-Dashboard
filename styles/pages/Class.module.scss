@@ -1,0 +1,60 @@
+@import "../colors";
+@import "../sizes";
+
+.avatar{
+    object-fit: contain;
+    width: 80%;
+    aspect-ratio: 1/1;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 1px solid $accent-color;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column !important;
+    gap: 10px;
+    padding: 10px;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 1.5rem;
+        span{
+            color: white;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+        color: white
+    }
+    @media screen and (max-width: $tablet-width) {
+        align-items: center;
+    }
+    @media screen and (max-width: $mobile-width) {
+        ul{
+            font-size: 1rem;
+        }
+    }
+}
+.Card{
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid $primary-color;
+    @media screen and (max-width: $tablet-width) {
+        width: 90%;
+    }
+}
+.link{
+    color: $primary-color;
+    text-decoration: underline;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

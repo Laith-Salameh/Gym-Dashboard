@@ -1,0 +1,22 @@
+@import "../colors";
+
+
+.chart{
+    border: 2px solid $secondary-color;
+    border-radius: 10px;
+    height: 400px;
+    padding: 10px;
+}
+
+.data{
+    border: 2px solid $secondary-color;
+    border-radius: 10px;
+    height: 182px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.number{
+    font-size: 4rem;
+    color: white;
+}

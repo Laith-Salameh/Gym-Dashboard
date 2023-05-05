@@ -1,0 +1,40 @@
+@import "../colors";
+
+.Card{
+    border: 1px solid $primary-color;
+    height: 300px;
+    border-radius: 15px;
+    justify-content: center;
+    transition: all 0.5s ease;
+    gap: 10px;
+    position: relative;
+    img{
+        object-fit: contain;
+        height: 50%;
+        border-radius: 50%;
+        border: 1px solid $accent-color;
+    }
+    h3{
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+    &:hover{
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    .close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        &:hover{
+            color: red;
+        }
+        cursor: pointer;
+
+    }
+}
+
+.fade{
+    opacity: 0.6;
+}

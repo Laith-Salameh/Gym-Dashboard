@@ -1,0 +1,120 @@
+@import "colors";
+@import "fonts";
+@import "sizes";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: $accent-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1{
+  padding: 0;
+  margin:0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@mixin center{
+  display: flex;
+  align-items: center;
+}
+.center{
+  @include center;
+}
+.center-column{
+  @include center;
+  flex-direction: column;
+}
+
+/////UI
+.button{
+  border-radius: 15px;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  min-width: 8rem;
+  max-width: 10rem;
+  cursor: pointer;
+  justify-content: center;
+  background-color: $secondary-color;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  gap: 5px;
+  &:hover{
+      color: $accent-color;
+      background-color: $primary-color;
+  }
+}
+
+.button-inverted{
+  border-radius: 15px;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  min-width: 8rem;
+  justify-content: center;
+  background-color: $accent-color;
+  border: 1px solid $accent-color;
+  color: $primary-color;
+  cursor: pointer;
+  gap: 5px;
+  &:hover{
+      color: $accent-color;
+      background-color: $secondary-color;
+  }
+}
+
+.button-disabled{
+  border-radius: 15px;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-align: center;
+  min-width: 8rem;
+  justify-content: center;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  cursor: pointer;
+}
+//MUI
+.MuiStack-root{
+  overflow: unset !important;
+}
+//scroll-bar
+*{
+  font-family: "OpenSansRegular";
+}
+main{
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color white;
+}
+
+main::-webkit-scrollbar {
+  width: 7px;
+  max-width: 1vw;
+}
+
+main::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px $primary-color; 
+}
+  
+main::-webkit-scrollbar-thumb {
+background: $primary-color ; 
+border-radius: 10px;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: $secondary-color ; 
+}

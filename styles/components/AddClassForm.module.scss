@@ -1,0 +1,57 @@
+@import "../colors";
+@import "../sizes";
+
+.wrapper{
+    position: absolute;
+    padding: 4rem;
+    top: 50%;
+    left: 50%;
+    max-height: 60vh;
+    transform: translate(-50%,-50%);
+    background-color: $primary-color;
+    outline: none !important;
+    border-radius: 15px;
+    gap: 1rem;
+    overflow: auto;
+    .title{
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    &:hover{
+        color: red;
+    }
+    outline: none !important;
+    cursor: pointer;
+
+}
+
+.wrapper{
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color white;
+  }
+  
+  .wrapper::-webkit-scrollbar {
+    width: 7px;
+    max-width: 0.1vw;
+  }
+  
+  .wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $secondary-color; 
+  }
+    
+  .wrapper::-webkit-scrollbar-thumb {
+  background: $secondary-color ; 
+  border-radius: 10px;
+  }
+  
+  .wrapper::-webkit-scrollbar-thumb:hover {
+    background: $primary-color ; 
+  }
