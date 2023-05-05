@@ -59,7 +59,7 @@ const ClientCard: FunctionComponent<{client: IClient}> = ({client})=>{
                  alt={"client " + client.full_name}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
-                    currentTarget.src="/images/admin.jpg";
+                    currentTarget.src="./images/admin.jpg";
                   }}/>
             <h3>{client.full_name}</h3>
             <span>{client.subscription_plan}</span>
@@ -83,7 +83,7 @@ const ClassCard: FunctionComponent<{gymClass: IClass}> = ({gymClass})=>{
                  alt={"client " + gymClass.title}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
-                    currentTarget.src="/images/admin.jpg";
+                    currentTarget.src="./images/admin.jpg";
                   }}/>
             <h3>{gymClass.title}</h3>   
             <span>{gymClass.coach_name}</span>         
