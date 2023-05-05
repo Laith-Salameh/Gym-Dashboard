@@ -55,7 +55,7 @@ const ClientCard: FunctionComponent<{client: IClient}> = ({client})=>{
     
     return (
         <div className={styles.Card + " center-column "}  >
-            <img src={client.avatar} 
+            <img src={"."+client.avatar} 
                  alt={"client " + client.full_name}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
@@ -79,7 +79,7 @@ const ClassCard: FunctionComponent<{gymClass: IClass}> = ({gymClass})=>{
     
     return (
         <div className={styles.Card + " center-column "}  >
-            <img src={gymClass.image} 
+            <img src={"."+gymClass.image} 
                  alt={"client " + gymClass.title}
                  onError={({ currentTarget }) => {
                     currentTarget.onerror = null; 
